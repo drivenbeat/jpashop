@@ -22,6 +22,7 @@ public class Member {
 
 //    @OneToMany
     @OneToMany(mappedBy = "member")// 주인이 아닌 쪽에 설정 (읽기전용)
+    // 반드시 아래와 같이 초기화 하고 변경하지 않는게 좋음
     private List<Order> order = new ArrayList<>();
 
 }
