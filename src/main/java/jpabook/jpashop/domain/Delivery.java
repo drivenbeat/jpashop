@@ -22,7 +22,7 @@ public class Delivery {
     private Address address;
 
     @Enumerated(EnumType.STRING) // enum 타입은 숫자로 넣지 말것
-    private DeliveryStatus deliveryStatus; // READY, COMP
+    private DeliveryStatus status; // READY, COMP
 
 
 }
