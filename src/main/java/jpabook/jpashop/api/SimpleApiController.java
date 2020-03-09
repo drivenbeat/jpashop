@@ -55,6 +55,18 @@ public class SimpleApiController {
         return result;
     }
 
+    // fetch join 100% 꼭 이해할 것
+    @GetMapping("/api/v3/simple-orders")
+    public List<SimpleOrderDto> orderV3() {
+
+        List<Order> orders = orderRepository.findAllWithMemberDelivery();
+        List<SimpleOrderDto> result = orders.stream()
+                .map(SimpleOrderDto::new)
+                .collect(toList());
+
+        return result;
+    }
+
     @Data
     static class SimpleOrderDto {
         private Long orderId;
