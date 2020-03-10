@@ -10,9 +10,9 @@ public class JpashopApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(JpashopApplication.class, args);
 	}
-
-	@Bean // entity를 직접 사용하는 경우만 등록
-	Hibernate5Module hibernate5Module() {
-		return new Hibernate5Module();
-	}
+//
+//	@Bean // entity를 직접 사용하는 경우만 등록
+//	Hibernate5Module hibernate5Module() {
+//		return new Hibernate5Module();
+//	}
 }

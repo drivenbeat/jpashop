@@ -10,8 +10,9 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
+        default_batch_fetch_size: 100 #기본 fetch in query갯수설정 (필수)
     # show_sql: true
+    # open-in-view : false #기본이 true / false로 설정할 경우 transaction 영역 이외의 lazy 로딩 및 영속성 컨텍스트가 제대로 동작하지 않음 - 끄는게 나을듯 ㅠㅠ
 logging.level:
   org.hibernate.SQL: debug
 # org.hibernate.type: trace
